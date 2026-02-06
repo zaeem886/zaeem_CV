@@ -50,6 +50,72 @@ body {
 }
 
 
+/* ---------- Screen: base layout helpers ---------- */
+
+/* Mobile / small screens: stack everything vertically in correct order */
+@media (max-width: 768px) {
+    body {
+        padding: 16px;
+    }
+
+    .actions {
+        position: static;
+        justify-content: flex-end;
+        margin-bottom: 12px;
+    }
+
+    #profile-picture {
+        position: static;
+        display: block;
+        margin: 0 auto 8px;
+    }
+
+    #name,
+    #title {
+        position: static;
+        display: block;
+        text-align: center;
+        left: auto;
+        right: auto;
+        top: auto;
+    }
+
+    #about-me-title,
+    #experience-projects-title,
+    #education-title {
+        position: static;
+        margin-top: 16px;
+    }
+
+    #about-me-content,
+    #experience-content,
+    #education-content {
+        position: static;
+        width: 100%;
+        left: auto;
+        top: auto;
+        font-size: 1rem;
+    }
+
+    #education-section {
+        position: static;
+        top: auto;
+        bottom: auto;
+        margin-top: 16px;
+    }
+
+    /* Contact + skills move below main content and take full width */
+    #contact-info {
+        position: static;
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    #skills {
+        margin-top: 12px;
+    }
+}
+
 @media print {
     .actions { display: none; }
     html[data-theme="dark"] body {
