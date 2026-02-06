@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Muhammad zaeem — CV</title>
+
+  <img id="profile-picture" src="pfp.jpeg" alt="profile picture" />
+  <p1 id="name">Muhammad zaeem</p1>
+  <p1 id="title">computer science student</p1>
+
+
+</head>
+
+<body>
+  <div class="actions">
+    <button id="theme-toggle" aria-label="Toggle theme">Toggle Dark/Light</button>
+    <button id="download-cv" aria-label="Download CV">Download CV</button>
+  </div>
+  <div id="about-me">
+    <h1 id="about-me-title">ⓘ About me</h1>
+    <p id="about-me-content">
+      Driven and enthusiastic Computer Science undergraduate with strong experience in C++, Assembly Language, and
+      full-stack web development (Node.js, Express, React, SQL). Passionate about problem-solving and system design,
+      with hands-on experience building real-world projects including management systems and games. A fast learner,
+      collaborative team player, and adaptable to new technologies. Dean’s List awardee (2×) and Competitive Programming
+      5th position holder, currently enrolled at FAST-NUCES (6th Semester).
+    </p>
+  </div>
+
+  <div id="experience-projects">
+    <h1 id="experience-projects-title">💼 Experience & Projects</h1>
+    <ul id="experience-content">
+      <ul>
+        <li>
+          <strong>Restaurant Management System</strong> (Node, Express, React & SQL): Developed a full-featured system
+          for restaurant operations with employee, customer, and admin interfaces. Features include inventory tracking,
+          table reservations, customer wallets, delivery management, and role-based access control. Implemented seamless
+          data flow between front-end and back-end for a smooth user experience.
+        </li>
+
+        <li>
+          <strong>Event Management System</strong> (Node, Django, SQLite): Built a platform to create and host
+          microsites for events. Integrated user-friendly forms for event registration, automated event pages, and
+          backend management for organizers. Focused on responsive design and scalability for multiple concurrent
+          events.
+        </li>
+
+        <li>
+          <strong>Bingo Game</strong> (C++ & SFML): Designed and implemented a fully functional graphical Bingo game.
+          Handled card generation, random number drawing, game state management, and interactive user inputs. Focused on
+          creating an engaging GUI and smooth gameplay experience.
+        </li>
+
+        <li>
+          <strong>University Flex System</strong> (C++): Developed a console-based management system for university
+          administration. Supported multiple roles including Dean, Teacher, and Student. Features include attendance
+          tracking, marks and GPA calculation, fee management, and inter-flex communication. Emphasized modular design
+          for easy maintenance and updates.
+        </li>
+
+        <li>
+          <strong>Machine Learning Project</strong> (Python, Kaggle): Trained an AI model to convert grey and black &
+          white images into colored images. Applied data preprocessing, model training, and evaluation on large
+          datasets. Achieved accurate colorization results using deep learning techniques.
+        </li>
+
+        <li>
+          <strong>Sudoku Solver & Player</strong> (Assembly Language): Implemented a Sudoku generator and solver
+          entirely in x86 assembly language. Optimized the backtracking algorithm for efficient puzzle generation and
+          solution. Focused on low-level memory management and maximizing execution performance.
+        </li>
+      </ul>
+
+  </div>
+
+
+  <div id="education-section">
+
+    </ul>
+    <h1 id="education-title">
+      🎓 Education
+    </h1>
+    <ul id="education-content">
+      <li>
+        <strong>FAST-NUCES, Lahore</strong><br>
+        BS Computer Science (BScCS)<br>
+        2023 – Present
+      </li>
+      <li>
+        <strong>DPS Sahiwal</strong><br>
+        FSc in Pre-Engineering<br>
+        2021 – 2023, GPA: 3.7/4
+      </li>
+    </ul>
+
+
+  </div>
+
+
+  <div id="contact-info">
+    <h1 id="contact-info-title" style="font-size: ;">📞 Contact Information</h1>
+    <p id="phone">📞 +92 317 074 8438</p>
+    <p id="email">✉️ <a href="mailto:zaeemch317@gmail.com">zaeemch317@gmail.com</a></p>
+    <p>📍 Lahore, PK-Punjab</p>
+    <p id="linkedin">
+      <a href="https://www.linkedin.com/in/muhammad-zaeem-605330344" target="_blank">
+        <img src="linkdin.png" style="width:20px; vertical-align:middle;"> LinkedIn
+      </a>
+    </p>
+    <p id="github">
+      <a href="https://github.com/zaeem886" target="_blank">
+        <img src="github.png" style="width:20px; vertical-align:middle;"> GitHub
+      </a>
+    </p>
+
+
+    <div id="skills">
+  <h2>S K I L L S</h2>
+
+  <p><strong>Programming Languages:</strong></p>
+  <ul>
+    <li>C++</li>
+    <li>C</li>
+    <li>Python</li>
+    <li>JavaScript</li>
+    <li>Assembly</li>
+    <li>SQL</li>
+    
+  </ul>
+
+  <p><strong>Libraries / Frameworks:</strong></p>
+  <ul>
+    <li>React.js</li>
+    <li>Node.js</li>
+    <li>Django</li>
+    <li>Next.js</li>
+  </ul>
+
+  <p><strong>Tools & Platforms:</strong></p>
+  <ul>
+    <li>Figma</li>
+    <li>VS Code</li>
+    <li>Visual Studio</li>
+    <li>Git</li>
+    <li>GitHub</li>
+    <li>Jira</li>
+
+  </ul>
+
+  <p><strong>Databases:</strong></p>
+  <ul>
+    <li>SQL Server</li>
+    <li>SQLite</li>
+  </ul>
+</div>
+
+
+
+  </div>
+
+
+
+
+  <script>
+  /*
+    This entire function runs immediately when the page loads.
+    It keeps all variables scoped (safe from global conflicts).
+  */
+  (function () {
+
+    // Get the <html> element (root of the document)
+    const root = document.documentElement;
+
+    // Get the saved theme (dark or light) from browser storage
+    const saved = localStorage.getItem('theme');
+
+    // If the saved theme is dark, apply dark theme on page load
+    if (saved === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+    }
+
+    // Get the theme toggle button
+    const btn = document.getElementById('theme-toggle');
+
+    /*
+      Add click event to theme toggle button
+      The ?. ensures no error if the button does not exist
+    */
+    btn?.addEventListener('click', () => {
+
+      // Check if the current theme is dark
+      const isDark = root.getAttribute('data-theme') === 'dark';
+
+      // Switch theme: dark → light, light → dark
+      root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+
+      // Save the selected theme in browser storage
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    });
+
+    // Get the download CV button
+    const dl = document.getElementById('download-cv');
+
+    /*
+      When the download button is clicked,
+      open the browser print dialog (used to save as PDF)
+    */
+    dl?.addEventListener('click', () => {
+      window.print();
+    });
+
+  })();
+</script>
+
+</body>
+
+</html>
