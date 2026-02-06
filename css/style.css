@@ -148,11 +148,15 @@ body {
 /* ---------- Right sidebar ---------- */
 #contact-info {
     width: 100%;
-   
+
     text-align: left;
     font-size: 0.95em;
     line-height: 1.5;
     color: var(--text);
+}
+
+#contact-info li {
+    left: 10px;
 }
 
 #contact-info-title {
@@ -206,11 +210,11 @@ body {
 @media print {
     @page {
         size: A4 portrait;
-        margin: 10mm;
+        margin: 0;
     }
 
     body {
-        padding: 0;
+        padding: 10mm;
         font-size: 16px;
         line-height: 1.3;
     }
@@ -272,7 +276,7 @@ body {
     #experience-content,
     #education-content {
         width: 80%;
-        font-size: 13px;
+        font-size: 12px;
         margin-top: 2px;
         margin-bottom: 2px;
     }
@@ -334,6 +338,3 @@ body {
         page-break-inside: avoid;
     }
 }
-
-
-
