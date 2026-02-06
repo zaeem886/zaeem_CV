@@ -1,6 +1,6 @@
 /* Base theme variables for light and dark modes */
 
-
+/* 10-15 ai used in this file mainly in printing and theme*/
 :root {
     --bg: #ffffff;
     --text: #0f172a;
@@ -73,7 +73,7 @@ body {
 
 
 
-/* ---------- Header ---------- */
+
 .header-container {
     display: flex;
     align-items: center;
@@ -101,7 +101,7 @@ body {
     color: var(--muted);
 }
 
-/* ---------- Two-column flex layout ---------- */
+
 .resume-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -120,7 +120,6 @@ body {
     margin-left: auto;
 }
 
-/* ---------- Section titles ---------- */
 #about-me-title,
 #experience-projects-title,
 #education-title {
@@ -129,7 +128,7 @@ body {
     margin-top: 20px;
 }
 
-/* ---------- Section content ---------- */
+
 #about-me-content {
     font-weight: 400;
     font-size: 0.9em;
@@ -145,7 +144,6 @@ body {
     font-size: 0.9em;
 }
 
-/* ---------- Right sidebar ---------- */
 #contact-info {
     width: 100%;
 
@@ -206,7 +204,90 @@ body {
 
 
 
-/* Print: compress layout to fit a single page */
+
+.contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--muted);
+}
+
+.contact-section .bar {
+    background: var(--card);
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0 10px;
+    font-size: 1em;
+    color: var(--text);
+}
+
+.contact-section .info {
+    padding: 10px 0;
+}
+
+.myform {
+    display: flex;
+    flex-direction: column;
+}
+
+.myform input,
+.myform textarea {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--muted);
+    background: var(--bg);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.95em;
+    transition: border-color 0.3s;
+}
+
+.myform input:focus,
+.myform textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.myform textarea {
+    resize: vertical;
+}
+
+.myform button {
+    padding: 8px 15px;
+    cursor: pointer;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--muted);
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 600;
+    transition: 0.3s;
+    align-self: flex-start;
+    margin-top: 5px;
+}
+
+.myform button:hover {
+    border-color: var(--accent);
+    transform: scale(1.05);
+}
+
+#form-status {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
+
 @media print {
     @page {
         size: A4 portrait;
@@ -242,7 +323,7 @@ body {
         font-size: 0.85em;
     }
 
-    /* Use flex for print two-column layout */
+
     .resume-wrapper {
         display: flex;
         flex-wrap: nowrap;
@@ -262,7 +343,6 @@ body {
         margin-left: auto;
     }
 
-    /* Section titles: tighter */
     #about-me-title,
     #experience-projects-title,
     #education-title {
@@ -271,7 +351,7 @@ body {
         margin-bottom: 2px;
     }
 
-    /* Content: full width, compact */
+
     #about-me-content,
     #experience-content,
     #education-content {
@@ -281,7 +361,7 @@ body {
         margin-bottom: 2px;
     }
 
-    /* Lists: tighter spacing */
+  
     ul {
         margin: 0;
         padding-left: 16px;
@@ -295,7 +375,7 @@ body {
         margin: 4px 0;
     }
 
-    /* Right sidebar: compact */
+   
     #contact-info {
         position: static;
         width: 100%;
@@ -327,7 +407,7 @@ body {
         text-decoration: none;
     }
 
-    /* Prevent page breaks */
+  
     .resume-wrapper,
     .left-column,
     .right-column,
